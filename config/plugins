@@ -1,0 +1,25 @@
+# default list of plugins
+
+# Log to syslog (disabled by default, see docs)
+# log.syslog
+
+# block mails from known bad hosts (see config/dnsbl.zones for the DNS zones queried)
+dnsbl
+
+# Check mail headers are valid
+data.rfc5322_header_checks
+
+# block mail from some known bad HELOs - see config/helo.checks.ini for configuration
+helo.checks
+
+auth/callfire_api_key
+mail_from/callfire_api_number
+
+# Disconnect client if they spew bad SMTP commands at us
+max_unrecognized_commands
+
+# Only accept mail for your personal list of hosts. Edit config/host_list
+# NOTE: THIS IS REQUIRED for inbound email.
+rcpt_to.in_host_list
+
+queue/callfire_api_send
