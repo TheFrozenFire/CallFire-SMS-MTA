@@ -1,1 +1,8 @@
-{"name":"haraka_local","description":"An SMTP Server","version":"0.0.1","dependencies":{}}
+{
+    "name": "callfire_mta",
+    "description": "An SMTP transmitter for CallFire SMS",
+    "version": "0.0.1",
+    "dependencies": {
+        "callfire": "0.0.x"
+    }
+}

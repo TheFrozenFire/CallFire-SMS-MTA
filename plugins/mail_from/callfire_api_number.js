@@ -15,7 +15,9 @@ exports.mail_from_access = function (next, connection, params) {
     }
     
     if(callfire.is_phone_number(number)) {
-        callfire.number.get_number(username, password, number, function(number) {
+        callfire.number.get_number(username, password, number, function(response, exception) {
+            var number = callfire.response(response);
+        
             if(number !== undefined && number.status == 'ACTIVE') {
                 return next();
             } else {
